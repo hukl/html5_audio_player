@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+<html>
+
+  <head>
+    <title>Mediaplayer</title>
+
+    <style>
+      #seek_area {
+        position: relative;
+        width: 600px;
+        height: 200px;
+        background-color: silver;
+      }
+
+      #playhead {
+        width: 1px;
+        height: 200px;
+        background-color: red;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    </style>
+
+    <script src="controls.js"></script>
+    <script>
+      document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+          console.log("LOADED");
+          webplayer.init()
+        },
+        false
+      );
+    </script>
+  </head>
+
+  <body>
+    <audio id="webplayer">
+      <source src="interlude.mp3" controls="true" type="audio/mpeg"/>
+    </audio>
+
+    <div id="player">
+      <div id="seek_area">
+        <div id="playhead"></div>
+      </div>
+      <div>
+        <span id="current_time">00:00:00</span>
+        <span id="total_time"></span>
+      </div>
+      <button id="play_button">Play</button>
+      <button id="pause_button">Pause</button>
+      <button id="stop_button">Stop</button>
+    </div>
+
+  </body>
+
+</html>
