@@ -21,6 +21,7 @@ webplayer = {
     });
 
     seek_area.addEventListener("click", function(e) {
+      webplayer.seek_to(e)
     });
   },
 
@@ -40,6 +41,16 @@ webplayer = {
     var player = document.getElementById("webplayer");
     player.pause();
     player.currentTime = 0;
+  },
+
+  seek_to : function(e) {
+    var player            = document.getElementById("webplayer");
+    var total_time        = player.duration;
+    var current_time      = player.currentTime;
+    var seek_position     = e.offsetX;
+    var seek_time         = Math.round((seek_position * total_time) / 600);
+
+    player.currentTime    = seek_time;
   },
 
   update_current_position : function(e) {
