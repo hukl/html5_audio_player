@@ -6,42 +6,18 @@
   <head>
     <title>Mediaplayer</title>
 
-    <style>
-      #seek_area {
-        position: relative;
-        width: 600px;
-        height: 200px;
-        background-image: url("interlude.png");
-      }
-
-      #playhead {
-        width: 1px;
-        height: 200px;
-        background-color: red;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-      }
-    </style>
-
-    <script src="controls.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/buzz.js"></script>
+    <script src="js/controls.js"></script>
     <script>
       document.addEventListener(
         "DOMContentLoaded",
-        function() {
-          console.log("LOADED");
-          webplayer.init()
-        },
-        false
+        function() { webplayer.init() }, false
       );
     </script>
   </head>
 
   <body>
-    <audio id="webplayer">
-      <source src="interlude.mp3" controls="true" type="audio/mpeg"/>
-    </audio>
-
     <div id="player">
       <div id="seek_area">
         <div id="playhead"></div>

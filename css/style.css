@@ -1,0 +1,15 @@
+#seek_area {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  background-image: url("../interlude.png");
+}
+
+#playhead {
+  width: 1px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
